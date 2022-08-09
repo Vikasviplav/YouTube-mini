@@ -23,13 +23,14 @@ let displayVideo = (videoList) => {
     let videoThumbnail = document.createElement("img")
     videoThumbnail.src = url
 
-    let channelTitleElement = document.createElement("h1")
+    let channelTitleElement = document.createElement("h3")
     channelTitleElement.textContent = channelTitle
 
     let videoTitle = document.createElement("p")
     videoTitle.textContent = title
 
-    div.append(videoThumbnail, channelTitle, videoTitle)
+
+    div.append(videoThumbnail, videoTitle, channelTitle)
 
 
     container.append(div)
@@ -44,7 +45,7 @@ let displayVideo = (videoList) => {
 }
 
 
-var autoCall = async ()=> {
+var autoCall = async () => {
 
   try {
     let search = "most popular video in india"
